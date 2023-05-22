@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form e Tabella</title>
+  <style>
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+    th, td {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+td .button-cell {
+  border: none;
+}
+
+td .button-cell button {
+  border: none;
+}
+    input[type="text"]::placeholder {
+      color: rgb(187, 187, 187);
+    }
+    fieldset {
+    width: 20%;
+    height: 25%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    }   
+    .delete-button, .edit-button,.button-cell {
+  padding: 5px 10px;
+  background-color: grey;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.errors {
+  color: red;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.delete-button:hover, .edit-button:hover {
+  background-color: #d32f2f;
+}
+  </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Subscribe Form:</legend>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="name" name="name"  placeholder="ex. Mario"> <p id="error-name" class="errors"></p><br><br>
+            
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="surname" name="surname"  placeholder="ex. Rossi"> <p id="error-surname" class="errors"></p><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Mario.Rossi@example.com"> <p id="error-email" class="errors"></p><br><br>
+            <input type="button" id="submit" value="Submit">
+        </form>
+    </fieldset>
+    
+    
+  <table id="data-table">
+  </table>
+
+  <fieldset>
+    <legend>Search Email:</legend>
+    <input type="text" id="searchEmail" placeholder="Search by Email">
+    <input type="button" id="searchButton" value="Search">
+</fieldset>
+
+
+  <script src="script.js">
+    
+  </script>
+</body>
+</html>
